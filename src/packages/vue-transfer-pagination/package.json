@@ -1,0 +1,20 @@
+{
+  "name": "vue-transfer-pagination",
+  "version": "1.0.0",
+  "description": "vue element-ui el-transfer join el-pagination",
+  "main": "lib/index.umd.min.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "element-ui",
+    "el-transfer",
+    "el-pagination"
+  ],
+  "author": "kkkkh",
+  "license": "ISC"
+}
