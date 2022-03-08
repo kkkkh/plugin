@@ -1,6 +1,6 @@
 {
   "name": "vue-transfer-pagination",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue element-ui el-transfer join el-pagination",
   "main": "lib/index.umd.min.js",
   "directories": {

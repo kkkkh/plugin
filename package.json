@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name vue-plugin-set --dest lib src/index.ts",
-    "wc:vep": "vue-cli-service build --target lib --dest src/packages/vue-transfer-pagination/lib --name index src/components/vue-transfer-pagination/index.ts"
+    "wc:vep": "vue-cli-service build --target lib --dest packages/vue-transfer-pagination/lib --name index src/components/vue-transfer-pagination/index.ts"
   },
   "dependencies": {
     "@vue/composition-api": "^1.4.9",
