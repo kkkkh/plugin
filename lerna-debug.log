@@ -1,0 +1,9 @@
+40 error Error: Command failed with exit code 128: git push --follow-tags --no-verify --atomic origin main
+40 error kex_exchange_identification: read: Connection reset by peer
+40 error Connection reset by 20.205.243.166 port 22
+40 error fatal: Could not read from remote repository.
+40 error
+40 error Please make sure you have the correct access rights
+40 error and the repository exists.
+40 error     at makeError (C:\Users\86178\Desktop\note-a\note-s\plan\p7\2、工程化\lerna\plugin\node_modules\.pnpm\registry.npmmirror.com+execa@5.1.1\node_modules\execa\lib\error.js:60:11)
+40 error     at handlePromise (C:\Users\86178\Desktop\note-a\note-s\plan\p7\2、工程化\lerna\plugin\node_modules\.pnpm\registry.npmmirror.com+execa@5.1.1\node_modules\execa\index.js:118:26)
