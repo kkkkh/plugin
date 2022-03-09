@@ -32,6 +32,7 @@ specifiers:
   vue-cli-plugin-element: ^1.0.1
   vue-router: ^3.2.0
   vue-template-compiler: ^2.6.11
+  vue-transfer-pagination: ^0.0.2
   vuex: ^3.4.0
 
 dependencies:
@@ -40,6 +41,7 @@ dependencies:
   element-ui: registry.npmmirror.com/element-ui/2.15.6_vue@2.6.14
   vue: registry.npmmirror.com/vue/2.6.14
   vue-router: registry.npmmirror.com/vue-router/3.5.3
+  vue-transfer-pagination: registry.npmmirror.com/vue-transfer-pagination/0.0.2
   vuex: registry.npmmirror.com/vuex/3.6.2_vue@2.6.14
 
 devDependencies:
@@ -15766,6 +15768,12 @@ packages:
     name: vue-template-es2015-compiler
     version: 1.9.1
     dev: true
+
+  registry.npmmirror.com/vue-transfer-pagination/0.0.2:
+    resolution: {integrity: sha512-cE/7B1COBW3OIliNREH1OAIotcHWIYVHiYyPbnDJFnucMNEF3TBkKSWJainoxLBLcm95pecLnX9WzHLwHseQoQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-transfer-pagination/-/vue-transfer-pagination-0.0.2.tgz}
+    name: vue-transfer-pagination
+    version: 0.0.2
+    dev: false
 
   registry.npmmirror.com/vue/2.6.14:
     resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue/-/vue-2.6.14.tgz}

@@ -12,9 +12,11 @@
   </div>
 </template>
 <script lang="ts">
+// @ts-ignore
+import VueTransferPagination from "vue-transfer-pagination";
 import { defineComponent, ref } from "@vue/composition-api";
 import { TransferData } from "element-ui/types/transfer";
-import VueTransferPagination from "@/components/vue-transfer-pagination/index.vue";
+// import VueTransferPagination from "@/components/vue-transfer-pagination/index.vue";
 // import VueTransferPagination from "@/packages/vue-transfer-pagination/vue-transfer-pagination.umd.js";
 export default defineComponent({
   components: {
