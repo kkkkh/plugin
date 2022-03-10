@@ -1,4 +1,4 @@
-import VueTransferPagination from "./main.vue";
+import VueTransferPagination from "./index.vue";
 
 /* istanbul ignore next */
 VueTransferPagination.install = function(Vue) {

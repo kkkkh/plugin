@@ -8,15 +8,16 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name index --dest packages/vue-plugin-set/lib src/index.ts",
-    "wc": "vue-cli-service build --target wc --dest packages/vue-transfer-pagination/lib --name vue-transfer-pagination src/components/vue-transfer-pagination/index.vue"
+    "wc": "vue-cli-service build --target lib --dest packages/vue-transfer-pagination/lib --name vue-transfer-pagination src/components/vue-transfer-pagination/index.js"
   },
   "dependencies": {
     "@vue/composition-api": "^1.4.9",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.6",
     "vue": "^2.6.11",
+    "vue-form-config": "^1.3.1",
     "vue-router": "^3.2.0",
-    "vue-transfer-pagination": "0.0.17",
+    "vue-transfer-pagination": "0.0.18",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
