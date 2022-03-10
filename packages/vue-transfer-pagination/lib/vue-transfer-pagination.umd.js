@@ -1,5 +1,14 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory((function webpackLoadOptionalExternalModule() { try { return require("vue"); } catch(e) {} }()));
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["vue-transfer-pagination"] = factory((function webpackLoadOptionalExternalModule() { try { return require("vue"); } catch(e) {} }()));
+	else
+		root["vue-transfer-pagination"] = factory(root["Vue"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__8bbf__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -2307,7 +2316,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/.pnpm/cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"79ad82d6-vue-loader-template"}!./node_modules/.pnpm/vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/.pnpm/cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/.pnpm/vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib??vue-loader-options!./src/components/vue-transfer-pagination/index.vue?vue&type=template&id=53949b3a&
+// CONCATENATED MODULE: ./node_modules/.pnpm/cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7e60dea5-vue-loader-template"}!./node_modules/.pnpm/vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/.pnpm/cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/.pnpm/vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib??vue-loader-options!./src/components/vue-transfer-pagination/index.vue?vue&type=template&id=53949b3a&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-transfer',{staticClass:"vue-transfer-pagination",attrs:{"target-order":_vm.targetOrder,"data":_vm.originData,"filter-method":_vm.filterMethod,"titles":_vm.titles,"filterable":_vm.filterable,"filter-placeholder":_vm.filterPlaceholder},on:{"change":_vm.tableChange},scopedSlots:_vm._u([{key:"left-footer",fn:function(){return [_c('el-pagination',{attrs:{"current-page":_vm.originState.page,"page-sizes":_vm.page.pageSizes,"page-size":_vm.page.pageSize,"layout":_vm.page.layout,"total":_vm.originState.total},on:{"update:currentPage":function($event){return _vm.$set(_vm.originState, "page", $event)},"update:current-page":function($event){return _vm.$set(_vm.originState, "page", $event)},"size-change":function (val) { return _vm.originPage.handleSizeChange.call(_vm.originPage, val); },"current-change":function (val) { return _vm.originPage.handleCurrentChange(val); }}})]},proxy:true},{key:"right-footer",fn:function(){return [_c('el-pagination',{attrs:{"current-page":_vm.mapState.page,"page-sizes":_vm.page.pageSizes,"page-size":_vm.page.pageSize,"layout":_vm.page.layout,"pager-count":5,"total":_vm.mapState.total},on:{"update:currentPage":function($event){return _vm.$set(_vm.mapState, "page", $event)},"update:current-page":function($event){return _vm.$set(_vm.mapState, "page", $event)},"size-change":function (val) { return _vm.mapPage.handleSizeChange(val); },"current-change":function (val) { return _vm.mapPage.handleCurrentChange(val); }}})]},proxy:true}]),model:{value:(_vm.tables),callback:function ($$v) {_vm.tables=$$v},expression:"tables"}})}
 var staticRenderFns = []
 
@@ -6025,7 +6034,8 @@ module.exports = patchedExec;
 /***/ "8bbf":
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+if(typeof __WEBPACK_EXTERNAL_MODULE__8bbf__ === 'undefined') {var e = new Error("Cannot find module 'undefined'"); e.code = 'MODULE_NOT_FOUND'; throw e;}
+module.exports = __WEBPACK_EXTERNAL_MODULE__8bbf__;
 
 /***/ }),
 
@@ -8341,4 +8351,5 @@ module.exports = !fails(function () {
 /***/ })
 
 /******/ })["default"];
-//# sourceMappingURL=index.common.js.map
+});
+//# sourceMappingURL=vue-transfer-pagination.umd.js.map

@@ -16,13 +16,13 @@
 import { defineComponent, ref } from "@vue/composition-api";
 import { TransferData } from "element-ui/types/transfer";
 // import VueTransferPagination from "VueTransferPagination";
-// import VueTransferPagination from "@/components/vue-transfer-pagination/index";
-// import VueTransferPagination from "../../packages/vue-transfer-pagination/lib/index.umd.js";
+import VueTransferPagination from "@/components/vue-transfer-pagination/index";
+// import VueTransferPagination from "../../packages/vue-transfer-pagination/lib/index";
 // import Vue from 'vue'
 // Vue.use(VueTransferPagination)
 export default defineComponent({
   components: {
-    // VueTransferPagination,
+    VueTransferPagination,
   },
   setup() {
     const tables = ref([]);

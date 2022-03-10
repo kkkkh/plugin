@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../../packages/vue-transfer-pagination/lib/vue-transfer-pagination.css">
+</head>
+<body>
+    <div id="app">
+    <vue-transfer-pagination
+        v-model="tables"
+        :data="allDataSourceTables"
+        target-order="push"
+        :filter-method="filterMethod"
+        :titles="['源表', '已选择']"
+        filterable
+        filter-placeholder="请输入表名过滤"
+      />
+</div>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- <script src="./vue-form-config/lib/vue-form-config.umd.js"></script> -->
+    <script src="../../packages/vue-transfer-pagination/lib/vue-transfer-pagination.umd.min.js"></script>
+    <script>
+        // 打包 packages/index.js install
+        // Vue.use(window["vue-form-config"].default)
+        // 打包 packages/vueFormConfig/main.vue 
+        // Vue.component('vue-form-config', window["vue-form-config"].default);
+        const app = new Vue({
+            el:"#app",
+            data(){
+                return {
+                    tables:[],
+                    allDataSourceTables:[
+                        {
+                            label: "123",
+                            key: "123",
+                            disabled: false,
+                        }
+                    ]
+                }
+            },
+            created() {
+                while (this.allDataSourceTables.length < 1000) {
+                const index = this.allDataSourceTables.length;
+                this.allDataSourceTables.push({
+                    label: index + "",
+                    key: index,
+                    disabled: false,
+                });
+                }
+            },
+            methods: {
+                filterMethod (query, item)  {
+                    return item.label.includes(query);
+                }
+            },
+            components:{
+                // 打包 packages/vueFormConfig/main.vue 
+                'vue-transfer-pagination':window['vue-transfer-pagination']
+                // 打包 packages/index.js install
+                // 'vue-form-config':window['vue-form-config'].default[0]
+            }
+        })
+    </script>
+</body>
+</html>

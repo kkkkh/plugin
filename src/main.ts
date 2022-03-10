@@ -4,11 +4,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./plugins/element.js";
-import VueTransferPagination from "vue-transfer-pagination";
+// import VueTransferPagination from "vue-transfer-pagination";
 
 Vue.use(VueCompositionAPI);
 Vue.config.productionTip = false;
-Vue.use(VueTransferPagination);
+// Vue.use(VueTransferPagination);
 
 new Vue({
   router,
