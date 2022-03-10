@@ -15,9 +15,8 @@
 // import VueTransferPagination from "vue-transfer-pagination";
 import { defineComponent, ref } from "@vue/composition-api";
 import { TransferData } from "element-ui/types/transfer";
-// import VueTransferPagination from "@/components/vue-transfer-pagination/index.vue";
-// @ts-ignore
-import VueTransferPagination from "../../packages/vue-transfer-pagination/lib/index.umd.js";
+import VueTransferPagination from "@/components/vue-transfer-pagination/index.vue";
+// import VueTransferPagination from "/lerna/plugin/packages/vue-transfer-pagination/lib/index.umd.js";
 export default defineComponent({
   components: {
     VueTransferPagination,

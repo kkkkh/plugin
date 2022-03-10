@@ -1,5 +1,9 @@
 {
   "packages": ["packages/*"],
   "version": "independent",
-  "npmClient": "pnpm"
+  "npmClient": "pnpm",
+  "publish": {
+    "message": "chore(release): publish",
+    "registry": "https://registry.npm.taobao.org/"
+  }
 }
