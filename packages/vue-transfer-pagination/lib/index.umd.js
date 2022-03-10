@@ -4671,7 +4671,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/.pnpm/registry.npmmirror.com+cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d263cb80-vue-loader-template"}!./node_modules/.pnpm/registry.npmmirror.com+vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/.pnpm/registry.npmmirror.com+cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/.pnpm/registry.npmmirror.com+vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib??vue-loader-options!./src/components/vue-transfer-pagination/index.vue?vue&type=template&id=8bc225fe&
+// CONCATENATED MODULE: ./node_modules/.pnpm/registry.npmmirror.com+cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"8656b1e8-vue-loader-template"}!./node_modules/.pnpm/registry.npmmirror.com+vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/.pnpm/registry.npmmirror.com+cache-loader@4.1.0_webpack@4.46.0/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/.pnpm/registry.npmmirror.com+vue-loader@15.9.8_679359cdb69c218f2f8f476b2ba08796/node_modules/vue-loader/lib??vue-loader-options!./src/components/vue-transfer-pagination/index.vue?vue&type=template&id=8bc225fe&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-transfer',{staticClass:"vue-transfer-pagination",attrs:{"target-order":_vm.targetOrder,"data":_vm.originData,"filter-method":_vm.filterMethod,"titles":_vm.titles,"filterable":_vm.filterable,"filter-placeholder":_vm.filterPlaceholder},on:{"change":_vm.tableChange},scopedSlots:_vm._u([{key:"left-footer",fn:function(){return [_c('el-pagination',{attrs:{"current-page":_vm.originState.page,"page-sizes":_vm.page.pageSizes,"page-size":_vm.page.pageSize,"layout":_vm.page.layout,"total":_vm.originState.total},on:{"update:currentPage":function($event){return _vm.$set(_vm.originState, "page", $event)},"update:current-page":function($event){return _vm.$set(_vm.originState, "page", $event)},"size-change":function (val) { return _vm.originPage.handleSizeChange.call(_vm.originPage, val); },"current-change":function (val) { return _vm.originPage.handleCurrentChange(val); }}})]},proxy:true},{key:"right-footer",fn:function(){return [_c('el-pagination',{attrs:{"current-page":_vm.mapState.page,"page-sizes":_vm.page.pageSizes,"page-size":_vm.page.pageSize,"layout":_vm.page.layout,"pager-count":5,"total":_vm.mapState.total},on:{"update:currentPage":function($event){return _vm.$set(_vm.mapState, "page", $event)},"update:current-page":function($event){return _vm.$set(_vm.mapState, "page", $event)},"size-change":function (val) { return _vm.mapPage.handleSizeChange(val); },"current-change":function (val) { return _vm.mapPage.handleCurrentChange(val); }}})]},proxy:true}]),model:{value:(_vm.tables),callback:function ($$v) {_vm.tables=$$v},expression:"tables"}})}
 var staticRenderFns = []
 
@@ -7866,37 +7866,10 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var vue_transfer_pagination = (component.exports);
-// CONCATENATED MODULE: ./src/utitls/install.ts
-
-
-var installCon = function installCon(components) {
-  var install = function install(Vue) {
-    if (Array.isArray(components)) {
-      components.map(function (component) {
-        Vue.component(component.name, component);
-      });
-    } else {
-      Vue.component(components.name, components);
-    }
-  };
-
-  return {
-    install: install
-  };
-};
-// CONCATENATED MODULE: ./src/components/vue-transfer-pagination/index.ts
-
-
-
-var _installCon = installCon(vue_transfer_pagination),
-    vue_transfer_pagination_install = _installCon.install;
-
-vue_transfer_pagination.install = vue_transfer_pagination_install;
-/* harmony default export */ var components_vue_transfer_pagination = (vue_transfer_pagination);
 // CONCATENATED MODULE: ./node_modules/.pnpm/registry.npmmirror.com+@vue+cli-service@4.5.15_16cfc413baa1a2bd5dda6df172a36963/node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (components_vue_transfer_pagination);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (vue_transfer_pagination);
 
 
 
