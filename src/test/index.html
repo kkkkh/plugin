@@ -29,6 +29,7 @@
         // Vue.use(window["vue-form-config"].default)
         // 打包 packages/vueFormConfig/main.vue 
         // Vue.component('vue-form-config', window["vue-form-config"].default);
+        Vue.use(window['vue-transfer-pagination'])
         const app = new Vue({
             el:"#app",
             data(){
@@ -58,12 +59,12 @@
                     return item.label.includes(query);
                 }
             },
-            components:{
-                // 打包 packages/vueFormConfig/main.vue 
-                'vue-transfer-pagination':window['vue-transfer-pagination']
-                // 打包 packages/index.js install
-                // 'vue-form-config':window['vue-form-config'].default[0]
-            }
+            // components:{
+            //     // 打包 packages/vueFormConfig/main.vue 
+            //     'vue-transfer-pagination':window['vue-transfer-pagination']
+            //     // 打包 packages/index.js install
+            //     // 'vue-form-config':window['vue-form-config'].default[0]
+            // }
         })
     </script>
 </body>

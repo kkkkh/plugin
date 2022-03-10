@@ -60,7 +60,7 @@ export interface Pagination {
 }
 
 /** Transfer Component */
-export declare class VueTransferPagination extends ElementUIComponent {
+declare class VueTransferPagination extends ElementUIComponent {
   /** Data source */
   data: TransferData[];
 
@@ -102,3 +102,5 @@ export declare class VueTransferPagination extends ElementUIComponent {
 
   page: Pagination;
 }
+
+export default VueTransferPagination;

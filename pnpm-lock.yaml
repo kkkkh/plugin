@@ -32,7 +32,7 @@ specifiers:
   vue-cli-plugin-element: ^1.0.1
   vue-router: ^3.2.0
   vue-template-compiler: ^2.6.11
-  vue-transfer-pagination: 0.0.14
+  vue-transfer-pagination: 0.0.16
   vuex: ^3.4.0
 
 dependencies:
@@ -41,7 +41,7 @@ dependencies:
   element-ui: 2.15.6_vue@2.6.14
   vue: 2.6.14
   vue-router: 3.5.3
-  vue-transfer-pagination: 0.0.14
+  vue-transfer-pagination: 0.0.16
   vuex: 3.6.2_vue@2.6.14
 
 devDependencies:
@@ -8409,7 +8409,7 @@ packages:
     dev: true
 
   /minimatch/3.0.4:
-    resolution: {integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/minimatch/-/minimatch-3.0.4.tgz}
+    resolution: {integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==}
     dependencies:
       brace-expansion: 1.1.11
     dev: true
@@ -11600,7 +11600,7 @@ packages:
     dev: true
 
   /supports-color/6.0.0:
-    resolution: {integrity: sha512-on9Kwidc1IUQo+bQdhi8+Tijpo0e1SS6RoGo2guUwn5vdaxw8RXOF9Vb2ws+ihWOmh4JnCJOvaziZWP1VABaLg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/supports-color/-/supports-color-6.0.0.tgz}
+    resolution: {integrity: sha512-on9Kwidc1IUQo+bQdhi8+Tijpo0e1SS6RoGo2guUwn5vdaxw8RXOF9Vb2ws+ihWOmh4JnCJOvaziZWP1VABaLg==}
     engines: {node: '>=6'}
     dependencies:
       has-flag: 3.0.0
@@ -12433,8 +12433,8 @@ packages:
     resolution: {integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz}
     dev: true
 
-  /vue-transfer-pagination/0.0.14:
-    resolution: {integrity: sha512-kvJNfVrjU84Bh7oRp83AVJg0dqua3Nr1bXoJppNe2xYziQ154qOXK8qNg0d65f+LUij/8gBNkRMZU00pvwLF1w==}
+  /vue-transfer-pagination/0.0.16:
+    resolution: {integrity: sha512-jAB6FBj/ageSJAVp7Jt8diH+ZgJ0A3LG0yQG6Gpask5axLuyd1wwq73Tsvmuy+dWgzdZfO5BGv3G9tSF8D6pxg==}
     dev: false
 
   /vue/2.6.14:
