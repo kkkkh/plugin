@@ -49,6 +49,7 @@ import { OriginPageState, MapPageState } from "@/hooks/page";
 import { TransferData } from "element-ui/types/transfer";
 // import { Transfer as ElTransfer, Pagination as ElPagination } from "element-ui";
 export default defineComponent({
+  name:"vue-transfer-pagination",
   components: {
     // ElTransfer,
     // ElPagination,
