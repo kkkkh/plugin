@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { ref, Ref, reactive } from "@vue/composition-api";
 import {
   OriginPageDataValueType,
@@ -87,7 +89,7 @@ export class OriginPageState<
 
   getAllPageRightData() {
     const pageRightData: T[] = [];
-    this.rightCount.forEach((page: RightCountType<T>[], _key: number) => {
+    this.rightCount.forEach((page: RightCountType<T>[]) => {
       pageRightData.push(...page.map((item) => item.value));
     });
     // debugger
