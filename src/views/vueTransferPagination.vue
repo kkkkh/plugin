@@ -12,7 +12,7 @@
   </div>
 </template>
 <script lang="ts">
-import VueTransferPagination from "vue-transfer-pagination";
+// import VueTransferPagination from "vue-transfer-pagination";
 import { defineComponent, ref } from "@vue/composition-api";
 import { TransferData } from "element-ui/types/transfer";
 // import VueTransferPagination from "VueTransferPagination";
@@ -24,7 +24,7 @@ import { TransferData } from "element-ui/types/transfer";
 // Vue.use(VueTransferPagination)
 export default defineComponent({
   components: {
-    VueTransferPagination,
+    // VueTransferPagination,
   },
   setup() {
     const tables = ref([]);

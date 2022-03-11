@@ -33,7 +33,7 @@ specifiers:
   vue-form-config: ^1.3.1
   vue-router: ^3.2.0
   vue-template-compiler: ^2.6.11
-  vue-transfer-pagination: 0.0.18
+  vue-transfer-pagination: 0.0.19
   vuex: ^3.4.0
 
 dependencies:
@@ -43,7 +43,7 @@ dependencies:
   vue: 2.6.14
   vue-form-config: 1.3.2
   vue-router: 3.5.3
-  vue-transfer-pagination: 0.0.18
+  vue-transfer-pagination: 0.0.19
   vuex: 3.6.2_vue@2.6.14
 
 devDependencies:
@@ -12494,8 +12494,8 @@ packages:
     resolution: {integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz}
     dev: true
 
-  /vue-transfer-pagination/0.0.18:
-    resolution: {integrity: sha512-qW8UR860qZ6QBex1wcKokDLsMQOYKI/kUWczrlYYxPhmMrnunEoRdKvl/n728QOHu76fvGxb4Anu/f3i7XB1yA==}
+  /vue-transfer-pagination/0.0.19:
+    resolution: {integrity: sha512-MPShq2bDiImXOFUoiF9KT8GgASEwgHTL2YnQBYU+sBKOeWkVUfP1o4cxIZkpFhvUA39elGjP3NYAISdypg3MkQ==}
     dev: false
 
   /vue/2.6.14:
