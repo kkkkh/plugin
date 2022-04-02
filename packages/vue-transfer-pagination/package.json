@@ -1,6 +1,6 @@
 {
   "name": "vue-transfer-pagination",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "vue element-ui el-transfer join el-pagination",
   "main": "./lib/vue-transfer-pagination.umd.min.js",
   "directories": {
@@ -19,7 +19,7 @@
   "author": "kkkkh",
   "license": "ISC",
   "gitHead": "4c13e83e7eee8098b5b1b8690b302d19e990da50",
-  "peerDependencies":{
+  "peerDependencies": {
     "@vue/composition-api": "^1.4.9"
   }
 }
