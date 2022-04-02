@@ -18,5 +18,8 @@
   ],
   "author": "kkkkh",
   "license": "ISC",
-  "gitHead": "4c13e83e7eee8098b5b1b8690b302d19e990da50"
+  "gitHead": "4c13e83e7eee8098b5b1b8690b302d19e990da50",
+  "peerDependencies":{
+    "@vue/composition-api": "^1.4.9"
+  }
 }
