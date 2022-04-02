@@ -17,7 +17,7 @@
     "vue": "^2.6.11",
     "vue-form-config": "^1.3.1",
     "vue-router": "^3.2.0",
-    "vue-transfer-pagination": "0.0.19",
+    "vue-transfer-pagination": "0.0.21",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
