@@ -13,5 +13,6 @@
     "vue-form-config"
   ],
   "author": "kkkkh",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "b57e969ac61f3927d39c2a8698356de0dd071f31"
 }
