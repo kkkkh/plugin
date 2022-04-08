@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
 .info-title {
   height: 50px;
   font-size: 24px;

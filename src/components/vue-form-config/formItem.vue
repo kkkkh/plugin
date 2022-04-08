@@ -130,7 +130,7 @@ export default {
       type: Object,
     },
   },
-  provide: function () {
+  provide () {
     return {
       refValidate: this.refValidate,
     };
@@ -746,7 +746,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="scss">
 .vue-form-item {
   svg {
     width: 16px;

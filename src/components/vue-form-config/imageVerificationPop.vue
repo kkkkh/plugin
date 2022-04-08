@@ -105,7 +105,7 @@ export default {
 };
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
 .iv-wrapper {
   .iv-dialog {
     text-align: center;

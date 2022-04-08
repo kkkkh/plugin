@@ -179,7 +179,9 @@ export default {
     this.init = true;
     // })
   },
-  provide: () => {
+  provide() {
+    console.log(this)
+    debugger
     return {
       refValidate: this.refValidate,
     };
@@ -332,7 +334,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="scss">
 .vue-form-container {
   .form-item-container {
     display: flex;

@@ -9,3 +9,6 @@ nrm use taobao
 # read -p 'version:' version
 # pnpm add vue-transfer-pagination@0.0."$version"
 # pnpm run dev
+pnpm install
+pnpm run dev
+
