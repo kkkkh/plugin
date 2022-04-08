@@ -1,15 +1,12 @@
 {
   "name": "vue-transfer-pagination",
   "version": "0.0.22",
-  "description": "vue element-ui el-transfer join el-pagination",
+  "description": "vue,element-u,el-transfer join el-pagination",
   "main": "./lib/vue-transfer-pagination.umd.min.js",
   "directories": {
     "lib": "lib"
   },
   "types": "./types/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "vue",
     "element-ui",

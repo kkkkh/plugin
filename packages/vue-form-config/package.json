@@ -1,0 +1,17 @@
+{
+  "name": "vue-form-config",
+  "version": "1.3.1",
+  "description": "vue,element-ui,el-form,vue-form-config",
+  "main": "lib/vue-form-config.umd.min.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "vue",
+    "element-ui",
+    "el-form",
+    "vue-form-config"
+  ],
+  "author": "kkkkh",
+  "license": "ISC"
+}

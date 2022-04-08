@@ -1,3 +1,3 @@
 import { VueConstructor, PluginObject } from "vue";
 
-export type VueConstructorPlugin = VueConstructor & PluginObject<object>;
+export type VueConstructorPlugin<T> = VueConstructor & PluginObject<T>;

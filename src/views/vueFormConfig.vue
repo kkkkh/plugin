@@ -2,8 +2,8 @@
   <vue-form-config :params="params" @nextStep="nextStep"> </vue-form-config>
 </template>
 
-<script lang="ts">
-// import params from "@/params/dbqu";
+<script lang="js">
+import VueFormConfig from "vue-form-config";
 export default {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   data() {
@@ -19,7 +19,7 @@ export default {
           width: "100%",
           inline: false,
           labelSuffix: "",
-        //   readonly: true,
+          //   readonly: true,
           row: 2,
           btn: [
             {
@@ -222,7 +222,9 @@ export default {
       },
     };
   },
-  components: {},
+  components: {
+    VueFormConfig
+  },
   methods: {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     nextStep() {
