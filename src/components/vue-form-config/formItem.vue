@@ -130,7 +130,7 @@ export default {
       type: Object,
     },
   },
-  provide () {
+  provide() {
     return {
       refValidate: this.refValidate,
     };

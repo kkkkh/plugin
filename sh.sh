@@ -1,5 +1,5 @@
 # pnpm run lib-001
-# pnpm run lib-002
+pnpm run lib-002
 read -p 'commit：' commit
 git add .
 git commit -m "$commit"

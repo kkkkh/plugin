@@ -3,8 +3,8 @@
 </template>
 
 <script lang="js">
-import VueFormConfig from "@/components/vue-form-config/index";
-// import VueFormConfig from "vue-form-config";
+// import VueFormConfig from "@/components/vue-form-config/index";
+import VueFormConfig from "vue-form-config";
 export default {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   data() {
