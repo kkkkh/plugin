@@ -1,43 +1,51 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-// import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    redirect: "/vueTransferPagination",
-    // name: "Home",
-    // component: Home,
+    redirect: "/home",
   },
   {
-    path: "/vueTransferPagination",
-    name: "vueTransferPagination",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(
-        /* webpackChunkName: "vueTransferPagination" */ "../views/vueTransferPagination.vue"
-      ),
+    path: "/home",
+    name: "home",
+    component: () => import(/* webpackChunkName: "home" */ "../views/home.vue"),
   },
   {
-    path: "/vueFormConfig",
-    name: "vueFormConfig",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/plugins",
+    name: "plugins",
+    redirect: "/plugins/vueTransferPagination",
     component: () =>
-      import(
-        /* webpackChunkName: "vueFormConfig" */ "../views/vueFormConfig.vue"
-      ),
+      import(/* webpackChunkName: "plugins" */ "../views/plugins.vue"),
+    children: [
+      {
+        path: "vueTransferPagination",
+        name: "vueTransferPagination",
+        component: () =>
+          import(
+            /* webpackChunkName: "vueTransferPagination" */ "../views/vueTransferPagination.vue"
+          ),
+      },
+      {
+        path: "vueFormConfig",
+        name: "vueFormConfig",
+        component: () =>
+          import(
+            /* webpackChunkName: "vueFormConfig" */ "../views/vueFormConfig.vue"
+          ),
+      },
+      {
+        path: "vuePicturePreview",
+        name: "vuePicturePreview",
+        component: () =>
+          import(
+            /* webpackChunkName: "vueFormConfig" */ "../views/vuePicturePreview.vue"
+          ),
+      },
+    ],
   },
-  // {
-  //   path: "/home",
-  //   name: "Home",
-  //   component: Home,
-  // },
 ];
 
 const router = new VueRouter({
