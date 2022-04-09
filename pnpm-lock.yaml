@@ -43,7 +43,7 @@ dependencies:
   editorconfig: 0.15.3
   element-ui: 2.15.6_vue@2.6.14
   vue: 2.6.14
-  vue-form-config: 1.4.1
+  vue-form-config: 1.4.3
   vue-router: 3.5.3
   vue-transfer-pagination: 1.0.1_@vue+composition-api@1.4.9
   vuex: 3.6.2_vue@2.6.14
@@ -10155,10 +10155,6 @@ packages:
 
   /pseudomap/1.0.2:
     resolution: {integrity: sha512-b/YwNhb8lk1Zz2+bXXpS/LK9OisiZZ1SNsSLxN1x2OXVEhW2Ckr/7mWE5vrC1ZTiJlD9g19jWszTmJsB+oEpFQ==}
-<<<<<<< HEAD
-=======
-    dev: true
->>>>>>> 1d1caf3 (vue picture preview)
 
   /psl/1.8.0:
     resolution: {integrity: sha512-RIdOzyoavK+hA18OGGWDqUTsCLhtA7IcZ/6NCs4fFJaHBDab+pDDmDIByWFRQJq2Cd7r1OoQxBGKOaztq+hjIQ==}
@@ -12372,8 +12368,8 @@ packages:
       - supports-color
     dev: true
 
-  /vue-form-config/1.4.1:
-    resolution: {integrity: sha512-omgcRwXiR2KGn+V4QaXYVY/sULHuvHm+k33iGDQDfdi3bRJVPI4tuYK5pvmbV3O9Dj65ZncGRdkGli10a7yf/w==}
+  /vue-form-config/1.4.3:
+    resolution: {integrity: sha512-3EP/Pbl3M2Ri9XpL12QDT3YzS5hYSesiAp/1qsOTHlxMiwijygpKyKfWkkNzhBtOH6JZdLm0YIAHr6NnCZR/bw==}
     dev: false
 
   /vue-hot-reload-api/2.3.4:

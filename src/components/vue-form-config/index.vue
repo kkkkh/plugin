@@ -180,8 +180,8 @@ export default {
     // })
   },
   provide() {
-    console.log(this)
-    debugger
+    // console.log(this)
+    // debugger
     return {
       refValidate: this.refValidate,
     };

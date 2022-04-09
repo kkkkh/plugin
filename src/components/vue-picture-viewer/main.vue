@@ -95,7 +95,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="scss">
 .vue-look-picture {
   width: 100vw;
   height: 100vh;

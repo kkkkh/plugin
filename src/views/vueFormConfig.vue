@@ -203,7 +203,7 @@ export default {
             },
             tick: {
               before: async () => {
-                debugger;
+                // debugger;
                 const val = await this.deleteUrl("A108");
                 // debugger
                 return val;

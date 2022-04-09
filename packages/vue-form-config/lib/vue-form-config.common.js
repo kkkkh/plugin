@@ -4393,7 +4393,7 @@ var vue_form_configvue_type_script_lang_js_this = undefined;
   },
   provide: function provide() {
     console.log(this);
-    debugger;
+    // debugger;
     return {
       refValidate: this.refValidate
     };

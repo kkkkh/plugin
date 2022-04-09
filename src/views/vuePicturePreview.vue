@@ -35,8 +35,8 @@ export default {
     };
   },
   mounted() {
-      debugger
-      console.log(vueLookPicture)
+    // debugger
+    // console.log(vueLookPicture);
     this.lookPicture = vueLookPicture.init(this.list);
   },
   components: {},
