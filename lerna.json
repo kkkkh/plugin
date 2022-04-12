@@ -1,9 +1,10 @@
 {
   "packages": ["packages/*"],
   "version": "independent",
-  "npmClient": "pnpm",
   "publish": {
     "message": "chore(release): publish",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "useWorkspaces":true,
+  "npmClient": "pnpm"
 }
