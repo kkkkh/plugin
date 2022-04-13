@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import vueLookPicture from "@/components/vue-picture-viewer/index";
+import vueLookPicture from "@/components/vue-look-picture/index";
 
 export default {
   name: "app",

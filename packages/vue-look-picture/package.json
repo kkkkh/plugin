@@ -1,0 +1,18 @@
+{
+  "name": "vue-look-picture",
+  "version": "1.1.0",
+  "description": "a plugin for previewing images or pictures",
+  "main": "lib/vue-form-config.umd.min.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "vue",
+    "image",
+    "picture",
+    "picture preview",
+    "vue-look-picture"
+  ],
+  "author": "kkkkh",
+  "license": "ISC",
+}

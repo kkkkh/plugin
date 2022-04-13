@@ -1,7 +1,7 @@
 {
   "name": "vue-form-config",
   "version": "1.4.3",
-  "description": "vue,element-ui,el-form,vue-form-config",
+  "description": "a plugin for configuring forms",
   "main": "lib/vue-form-config.umd.min.js",
   "directories": {
     "lib": "lib"
