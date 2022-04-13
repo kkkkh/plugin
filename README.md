@@ -1,29 +1,31 @@
 # plugin
+## pre
+node v14.15.1
+npm v6.14.8
+
+npm install -g pnpm@next-7
+npm install -g lerna
+npm install -g nrm
 
 ## Project setup
 ```
 pnpm install
-```
-
-### Compiles and hot-reloads for development
-```
 pnpm run serve
+pnpm run lib-001 ...
 ```
 
-### Compiles and minifies for production
+## publish
 ```
-pnpm run build
+sh sh.sh
+```
+or 
+
+```
+read -p 'commit：' commit
+git add .
+git commit -m "$commit"
+nrm use npm
+lerna publish
+nrm use taobao
 ```
 
-### Run your unit tests
-```
-pnpm run test:unit
-```
-
-### Lints and fixes files
-```
-pnpm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -32,6 +32,7 @@ specifiers:
   vue: ^2.6.11
   vue-cli-plugin-element: ^1.0.1
   vue-form-config: 1.4.3
+  vue-look-picture: ^1.1.1
   vue-router: ^3.2.0
   vue-template-compiler: ^2.6.11
   vue-transfer-pagination: ^1.0.1
@@ -44,6 +45,7 @@ dependencies:
   element-ui: 2.15.6_vue@2.6.14
   vue: 2.6.14
   vue-form-config: 1.4.3
+  vue-look-picture: 1.1.1
   vue-router: 3.5.3
   vue-transfer-pagination: 1.0.1_@vue+composition-api@1.4.9
   vuex: 3.6.2_vue@2.6.14
@@ -12430,6 +12432,10 @@ packages:
       webpack: 4.46.0
     dev: true
     optional: true
+
+  /vue-look-picture/1.1.1:
+    resolution: {integrity: sha512-bsTuHtC3AqTSYNz6Jt6rU9gZpWHNPgsW5fevX4ecpi4TbmBZHcSy+R9d9RAZHjd6BWyFluhifFg4xLoNsCssZA==}
+    dev: false
 
   /vue-router/3.5.3:
     resolution: {integrity: sha512-FUlILrW3DGitS2h+Xaw8aRNvGTwtuaxrRkNSHWTizOfLUie7wuYwezeZ50iflRn8YPV5kxmU2LQuu3nM/b3Zsg==}
