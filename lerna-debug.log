@@ -1,0 +1,20 @@
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': 'C:\\Program Files\\nodejs\\node_modules\\lerna\\cli.js'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath C:\Users\86178\Desktop\plugin
+3 info versioning independent
+4 error JSONError: Unexpected token "}" (0x7D) in JSON at position 366 while parsing near "... \"license\": \"ISC\",\r\n}\r\n" in packages\vue-look-picture\package.json
+4 error
+4 error   16 |   "author": "kkkkh",
+4 error   17 |   "license": "ISC",
+4 error > 18 | }
+4 error      | ^
+4 error   19 |
+4 error
+4 error     at parseJson (C:\Users\86178\Desktop\plugin\node_modules\.pnpm\parse-json@5.2.0\node_modules\parse-json\index.js:29:21)
+4 error     at parse (C:\Users\86178\Desktop\plugin\node_modules\.pnpm\load-json-file@6.2.0\node_modules\load-json-file\index.js:15:9)
+4 error     at module.exports (C:\Users\86178\Desktop\plugin\node_modules\.pnpm\load-json-file@6.2.0\node_modules\load-json-file\index.js:18:47)
