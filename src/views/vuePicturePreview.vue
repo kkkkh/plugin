@@ -7,7 +7,8 @@
 </template>
 
 <script>
-import vueLookPicture from "@/components/vue-look-picture/index";
+import vueLookPicture from "vue-look-picture";
+import "vue-look-picture/lib/vue-form-config.css";
 
 export default {
   name: "app",

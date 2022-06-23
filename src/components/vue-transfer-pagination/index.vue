@@ -45,7 +45,7 @@ import {
   reactive,
   SetupContext,
 } from "@vue/composition-api";
-import { OriginPageState, MapPageState } from "@/hooks/page";
+import { OriginPageState, MapPageState } from "./hooks/page";
 import { TransferData } from "element-ui/types/transfer";
 import { Transfer as ElTransfer, Pagination as ElPagination } from "element-ui";
 export default defineComponent({
@@ -129,15 +129,19 @@ export default defineComponent({
       },
     },
   },
-  setup(prop: { data: TransferData[] }, ctx: SetupContext) {
+  setup(prop: { data: TransferData[],val:[] }, ctx: SetupContext) {
     const originPage = new OriginPageState<TransferData>({
       key: "key",
       name: "origin",
     });
     const originState = reactive(originPage.state);
     const { viewData: originData } = originPage;
+    // 前后的两个tables不一样
+    // 外部的tables 为右侧全部数据
+    // 内部的tables 为右侧展示数据
     const tables = computed({
       get: () => {
+        // 不在set 是set的时候还没有拿到mapPage.viewData.value数据
         originPage.rightCountDriveViewData(mapPage.viewData.value);
         return mapPage.viewData.value;
       },
@@ -148,6 +152,7 @@ export default defineComponent({
     const mapPage = new MapPageState<string>({ name: "map" });
     const mapState = reactive(mapPage.state);
     const tableChange = (_val: [], re: string, key: string[]) => {
+      // debugger;
       if (re === "right") {
         originPage.setToRight(key);
         mapPage.setToRight(key);
@@ -158,6 +163,7 @@ export default defineComponent({
       ctx.emit("input", mapPage.allData.value);
       ctx.emit("change", _val, re, key);
     };
+
     watch(
       () => prop.data,
       (val: TransferData[]) => {
@@ -169,6 +175,11 @@ export default defineComponent({
         immediate: true,
       }
     );
+    const init = (data:[])=>{
+      originPage.setToRight(data);
+      mapPage.setToRight(data);
+      ctx.emit("input", mapPage.allData.value);
+    }
     return {
       tables,
       tableChange,
@@ -177,6 +188,7 @@ export default defineComponent({
       mapState,
       originPage,
       mapPage,
+      init,
     };
   },
 });

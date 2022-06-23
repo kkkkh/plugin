@@ -41,7 +41,15 @@ const routes: Array<RouteConfig> = [
         name: "vuePicturePreview",
         component: () =>
           import(
-            /* webpackChunkName: "vueFormConfig" */ "../views/vuePicturePreview.vue"
+            /* webpackChunkName: "vuePicturePreview" */ "../views/vuePicturePreview.vue"
+          ),
+      },
+      {
+        path: "statusOper",
+        name: "statusOper",
+        component: () =>
+          import(
+            /* webpackChunkName: "statusOper" */ "../views/status-oper/index.vue"
           ),
       },
     ],

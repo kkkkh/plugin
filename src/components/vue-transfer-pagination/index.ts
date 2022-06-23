@@ -8,12 +8,3 @@ import VueTransferPagination from "./index.vue";
   Vue.component(VueTransferPagination.name, VueTransferPagination);
 };
 export default VueTransferPagination;
-
-// import { installCon } from "../../utitls/install";
-
-// const { install } = installCon(VueTransferPagination);
-
-// export default {
-//   ...VueTransferPagination,
-//   install,
-// };

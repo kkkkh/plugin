@@ -1,6 +1,7 @@
 <template>
   <div class="transfer-views">
     <vue-transfer-pagination
+      ref="vueTransferPagination"
       v-model="tables"
       :data="allDataSourceTables"
       target-order="push"
@@ -12,17 +13,21 @@
   </div>
 </template>
 <script lang="ts">
-import VueTransferPagination from "vue-transfer-pagination";
+// import VueTransferPagination from "vue-transfer-pagination";
 import { defineComponent, ref } from "@vue/composition-api";
 import { TransferData } from "element-ui/types/transfer";
-// import VueTransferPagination from "@/components/vue-transfer-pagination/index";
-// Vue.use(VueTransferPagination)
+import VueTransferPagination from "@/components/vue-transfer-pagination/index";
 export default defineComponent({
   components: {
     VueTransferPagination,
   },
   setup() {
-    const tables = ref([]);
+    const vueTransferPagination = ref();
+    setTimeout(() => {
+      vueTransferPagination.value.init([1, 2, 3]);
+      console.log(tables.value);
+    }, 1000);
+    const tables = ref();
     const allDataSourceTables = ref<TransferData[]>([]);
     while (allDataSourceTables.value.length < 1000) {
       const index = allDataSourceTables.value.length;
@@ -39,12 +44,13 @@ export default defineComponent({
       tables,
       allDataSourceTables,
       filterMethod,
+      vueTransferPagination,
     };
   },
 });
 </script>
 <style lang="scss">
 .transfer-views {
-  width: 1300px;
+  width: 1500px;
 }
 </style>
