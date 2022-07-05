@@ -1,0 +1,18 @@
+{
+  "name": "status-oper",
+  "version": "1.0.0",
+  "description": "a plugin for status operate",
+  "main": "lib/status-oper.umd.min.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "vue",
+    "element-ui",
+    "status",
+    "operate",
+    "status-oper"
+  ],
+  "author": "kkkkh",
+  "license": "ISC"
+}

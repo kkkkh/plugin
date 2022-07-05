@@ -1,47 +1,39 @@
 <template>
   <div class="gojob-base-table">
     <el-table
-      ref="ejTableComponent"
+      ref="baseTable"
       :data="tableData"
-      border
       style="width: 100%"
-      stripe
       :row-class-name="rowClassName"
-      :highlight-current-row="config.highlightCurrentRow"
+      v-bind="table.props"
       @selection-change="handleSelectionChange"
       @row-click="rowClick"
     >
-      <el-table-column
-        v-if="config.isIndex"
-        type="index"
-        :width="confi.isIndex.width"
-        :label="config.isIndex.label"
-      />
-      <el-table-column
-        v-if="config.isExpand"
-        type="expand"
-        :width="config.isExpand.width"
-      >
+      <el-table-column v-if="table.config.isExpand" type="expand" width="50">
         <template slot-scope="props">
           <slot name="expand" :props="props" />
         </template>
       </el-table-column>
       <el-table-column
-        v-if="config.isSelection"
+        v-if="table.config.isSelection"
         type="selection"
-        :width="config.isSelection.width"
+        width="50"
       />
-      <el-table-column
-        v-if="config.isRadio"
-        :width="config.isRadio.width">
+      <el-table-column v-if="table.config.isRadio" width="50">
         <template slot-scope="scope">
-          <el-radio :label="scope.row[config.rowKey]" :value="radioValue">
-            &nbsp;
-          </el-radio>
+          <el-radio :label="scope.row[table.config.rowKey]" :value="radioValue"
+            >&nbsp;</el-radio
+          >
         </template>
       </el-table-column>
       <el-table-column
-        v-for="(item, index) in columns"
+        v-if="table.config.isIndex"
+        type="index"
+        width="50"
+        label="序号"
+      />
+      <el-table-column
+        v-for="(item, index) in table.columns"
         :key="index"
         :prop="item.prop"
         :label="item.label"
@@ -69,17 +61,17 @@
           >{{ btn.name }}</el-button
         >
       </div> -->
-      <!-- <el-pagination
-        v-if="config.isPagination"
+      <el-pagination
+        v-if="pagination.config.isPagination"
         :current-page="pageConfig.currentPage"
-        :page-sizes="[10, 20, 30, 40, 50, 100]"
         :page-size="pageConfig.pageSize"
+        :total="total"
+        :page-sizes="[10, 20, 30, 40, 50, 100]"
         layout="total, sizes, prev, pager, next, jumper"
-        :total="pageConfig.total"
-        :hide-on-single-page="config.hideOnSinglePage"
+        v-bind="pagination.props"
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
-      /> -->
+      />
     </div>
   </div>
 </template>
@@ -90,126 +82,118 @@ import {
   defineComponent,
   reactive,
   ref,
-  SetupContext,
   PropType,
   onBeforeUnmount,
 } from "@vue/composition-api";
 import {
-  // Pagination as ElPagination,
+  Pagination as ElPagination,
   Table as ElTable,
   TableColumn as ElTableColumn,
   // Button as ElButton,
   Radio as ElRadio,
 } from "element-ui";
-import { ColumnsType } from "./ts/index";
-import { defaultConfig } from "./ts/default";
+import { defaultTable, defaultPagination, tableHandle } from "./hooks/index";
+import { TableType, PaginationType } from "./ts/index";
 export default defineComponent({
-  name: "BaseTable",
+  name: "VueTableConfig",
   components: {
     ElTableColumn,
     // ElButton,
-    // ElPagination,
+    ElPagination,
     ElTable,
     ElRadio,
   },
   props: {
     table: {
-      type: Object,
-      default: () => ({}),
+      type: Object as PropType<TableType>,
+      default: () => defaultTable(),
     },
     pagination: {
-      type: Object,
-      default: () => ({}),
-    },
-    columns: {
-      type: Array as PropType<ColumnsType[]>,
-      default: () => [] as ColumnsType[],
-    },
-    config: {
-      type: Object,
-      default: () => ({}),
+      type: Object as PropType<PaginationType>,
+      default: () => defaultPagination(),
     },
   },
-  setup(props: any, ctx: SetupContext) {
-    const radioValue = computed(() => {
-      return currentRow.value && currentRow.value[config.rowKey];
+  setup(props, ctx) {
+    // handle
+    const { tableData, refetch, baseTable, handlePagination, total } =
+      tableHandle({
+        api: props.table.api,
+        state: props.table.state,
+        enabled: props.table.enabled,
+      });
+    // page
+    const pageConfig = reactive({
+      pageSize: 30,
+      currentPage: 1,
     });
-    const config = reactive(Object.assign(defaultConfig(), props.config));
-    const ejTableComponent = ref();
-    // const pageConfig = reactive({
-    //   limit: 30,
-    //   page: 1,
-    // });
-    // const multipleSelection = ref<unknown[]>([]);
-    // const handleSizeChange = (size: number): void => {
-    //   clearSelection();
-    //   pageConfig.limit = size;
-    //   ctx.emit("paginationChange", pageProps.value);
-    // };
-    // 传递 分页和排序
-    // const pageProps = computed(() => {
-    //   return {
-    //     limit: pageConfig.limit,
-    //     offset: pageConfig.limit * (pageConfig.page - 1) + 0,
-    //     ...sortProp.value,
-    //   };
-    // });
-    // const handleCurrentChange = (current: number): void => {
-    //   pageConfig.page = current;
-    //   clearSelection();
-    //   ctx.emit("paginationChange", pageProps.value);
-    // };
-    // 存储 排序
-    // const setCurrentRow = (val: unknown) => {
-    //   currentRow.value = val;
-    // };
-    // const rowClick = (val: unknown) => {
-    //   if (config.isRowClick) {
-    //     currentRow.value = val;
-    //     ctx.emit("currentChange", val);
-    //   }
-    // };
-    // const handleSelectionChange = (row: unknown[]) => {
-    //   config.handleSelectionChange(row);
-    //   multipleSelection.value = row;
-    // };
-    // const clearSelection = () => {
-    //   ejTableComponent.value.$refs.table.clearSelection();
-    //   multipleSelection.value = [];
-    // };
-    // const handleBatchDelete = () => {
-    //   config.handleBatchDelete();
-    //   clearSelection();
-    // };
-    // const resetPage = () => {
-    //   handleCurrentChange(1);
-    // };
+    const pageProps = computed(() => {
+      return {
+        limit: pageConfig.pageSize,
+        offset: pageConfig.pageSize * (pageConfig.currentPage - 1) + 0,
+      };
+    });
+    const handleSizeChange = (pageSize: number): void => {
+      clearSelection();
+      pageConfig.pageSize = pageSize;
+      handlePagination(pageProps.value);
+    };
+    const handleCurrentChange = (currentPage: number): void => {
+      clearSelection();
+      pageConfig.currentPage = currentPage;
+      handlePagination(pageProps.value);
+    };
+    const resetPage = () => {
+      handleCurrentChange(1);
+    };
+    // currentRow
     const currentRow = ref();
-    // const rowClassName = ({ row }) => {
-    //   return radioValue.value && row[config.rowKey] === radioValue.value
-    //     ? "current-row"
-    //     : "";
-    // };
+    const setCurrentRow = (val: unknown) => {
+      currentRow.value = val;
+    };
+    const rowClick = (val: unknown) => {
+      if (props.table.config.isRowClick) {
+        currentRow.value = val;
+        ctx.emit("row-click", val);
+      }
+    };
+    const rowClassName = ({ row }) => {
+      return currentRow.value &&
+        row[props.table.config.rowKey] ===
+          currentRow.value[props.table.config.rowKey]
+        ? "define-current-row"
+        : "";
+    };
+    const radioValue = computed(() => {
+      return currentRow.value && currentRow.value[props.table.config.rowKey];
+    });
     onBeforeUnmount(() => {
       currentRow.value = null;
     });
+    // multipleSelection
+    const multipleSelection = ref<unknown[]>([]);
+    const handleSelectionChange = (rows: unknown[]) => {
+      ctx.emit("selection-change", rows);
+      multipleSelection.value = rows;
+    };
+    const clearSelection = () => {
+      (baseTable.value as ElTable).clearSelection();
+      multipleSelection.value = [];
+    };
     return {
-      // rowClassName,
-      // resetPage,
-      // pageConfig,
-      // handleSizeChange,
-      // handleCurrentChange,
-      // handleSelectionChange,
-      // rowClick,
-      // multipleSelection,
-      // handleBatchDelete,
-      // showColumnProp,
-      // setCurrentRow,
-      // clearSelection,
-      // currentRow,
-      ejTableComponent,
-      config,
+      rowClassName,
+      resetPage,
+      pageConfig,
+      handleSizeChange,
+      handleCurrentChange,
+      refetch,
+      handleSelectionChange,
+      rowClick,
+      multipleSelection,
+      setCurrentRow,
+      baseTable,
       radioValue,
+      tableData,
+      total,
     };
   },
 });

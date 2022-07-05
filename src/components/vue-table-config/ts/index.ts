@@ -1,7 +1,2 @@
-export type ColumnsType = {
-  label: string;
-  prop: string;
-  width: string;
-  scope?: string;
-  fixed?: boolean;
-};
+export { TableType } from "./table";
+export { PaginationType } from "./pagination";

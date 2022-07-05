@@ -11,21 +11,22 @@ const routes: Array<RouteConfig> = [
   {
     path: "/home",
     name: "home",
-    component: () => import(/* webpackChunkName: "home" */ "../views/home.vue"),
+    component: () =>
+      import(/* webpackChunkName: "home" */ "../views/home/index.vue"),
   },
   {
     path: "/plugins",
     name: "plugins",
     redirect: "/plugins/vueTransferPagination",
     component: () =>
-      import(/* webpackChunkName: "plugins" */ "../views/plugins.vue"),
+      import(/* webpackChunkName: "plugins" */ "../views/plugins/index.vue"),
     children: [
       {
         path: "vueTransferPagination",
         name: "vueTransferPagination",
         component: () =>
           import(
-            /* webpackChunkName: "vueTransferPagination" */ "../views/vueTransferPagination.vue"
+            /* webpackChunkName: "vueTransferPagination" */ "../views/vue-transfer-pagination/index.vue"
           ),
       },
       {
@@ -33,7 +34,7 @@ const routes: Array<RouteConfig> = [
         name: "vueFormConfig",
         component: () =>
           import(
-            /* webpackChunkName: "vueFormConfig" */ "../views/vueFormConfig.vue"
+            /* webpackChunkName: "vueFormConfig" */ "../views/vue-form-config/index.vue"
           ),
       },
       {
@@ -41,7 +42,7 @@ const routes: Array<RouteConfig> = [
         name: "vuePicturePreview",
         component: () =>
           import(
-            /* webpackChunkName: "vuePicturePreview" */ "../views/vuePicturePreview.vue"
+            /* webpackChunkName: "vuePicturePreview" */ "../views/vue-picture-preview/index.vue"
           ),
       },
       {
@@ -50,6 +51,14 @@ const routes: Array<RouteConfig> = [
         component: () =>
           import(
             /* webpackChunkName: "statusOper" */ "../views/status-oper/index.vue"
+          ),
+      },
+      {
+        path: "vueTableConfig",
+        name: "vueTableConfig",
+        component: () =>
+          import(
+            /* webpackChunkName: "vueTableConfig" */ "../views/vue-table-config/index.vue"
           ),
       },
     ],

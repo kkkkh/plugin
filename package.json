@@ -10,7 +10,8 @@
     "lib": "vue-cli-service build --target lib --name index --dest packages/vue-plugin-set/lib src/index.ts",
     "lib-001": "vue-cli-service build --target lib --dest packages/vue-transfer-pagination/lib --name vue-transfer-pagination src/components/vue-transfer-pagination/index.ts",
     "lib-002": "vue-cli-service build --target lib --dest packages/vue-form-config/lib --name vue-form-config src/components/vue-form-config/index.js",
-    "lib-003": "vue-cli-service build --target lib --dest packages/vue-look-picture/lib --name vue-look-picture src/components/vue-look-picture/index.js"
+    "lib-003": "vue-cli-service build --target lib --dest packages/vue-look-picture/lib --name vue-look-picture src/components/vue-look-picture/index.js",
+    "lib-004": "vue-cli-service build --target lib --dest packages/status-oper/lib --name status-oper src/components/status-oper/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

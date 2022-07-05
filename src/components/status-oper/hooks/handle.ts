@@ -4,7 +4,7 @@ import { HandlesItemType, StatusType } from "./type";
 
 export const statusHandle = <
   RowT extends Record<string, unknown>,
-  HandT extends string,
+  HandT extends string | number | symbol,
   RefetchT extends (r: unknown) => void
 >(
   handles: HandlesItemType<RowT, HandT, RefetchT>[]
