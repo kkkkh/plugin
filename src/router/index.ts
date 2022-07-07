@@ -69,6 +69,14 @@ const routes: Array<RouteConfig> = [
             /* webpackChunkName: "vueDialogDrawer" */ "../views/vue-dialog-drawer/index.vue"
           ),
       },
+      {
+        path: "vueSelectTree",
+        name: "vueSelectTree",
+        component: () =>
+          import(
+            /* webpackChunkName: "vueSelectTree" */ "../views/vue-select-tree/index.vue"
+          ),
+      },
     ],
   },
 ];

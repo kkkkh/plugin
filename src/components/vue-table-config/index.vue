@@ -89,7 +89,6 @@ import {
   Pagination as ElPagination,
   Table as ElTable,
   TableColumn as ElTableColumn,
-  // Button as ElButton,
   Radio as ElRadio,
 } from "element-ui";
 import { defaultTable, defaultPagination, tableHandle } from "./hooks/index";
@@ -98,7 +97,6 @@ export default defineComponent({
   name: "vue-table-config",
   components: {
     ElTableColumn,
-    // ElButton,
     ElPagination,
     ElTable,
     ElRadio,

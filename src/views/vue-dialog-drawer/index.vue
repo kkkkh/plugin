@@ -125,8 +125,4 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss">
-.transfer-views {
-  width: 1500px;
-}
-</style>
+<style lang="scss"></style>

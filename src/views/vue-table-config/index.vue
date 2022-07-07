@@ -1,5 +1,5 @@
 <template>
-  <div class="transfer-views">
+  <div class="">
     <vue-table-config
       ref="vueTableConfig"
       :table="tableConfig"
@@ -96,7 +96,5 @@ export default defineComponent({
 });
 </script>
 <style lang="scss">
-.transfer-views {
-  width: 1500px;
-}
+
 </style>

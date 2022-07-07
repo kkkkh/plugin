@@ -7,10 +7,6 @@
     v-bind="data.props"
   >
     <slot></slot>
-    <!-- <div>
-      <slot name="form" />
-      <slot name="table" />
-    </div> -->
     <span
       v-if="config.isBtn"
       :slot="isDialog ? 'footer' : undefined"
@@ -69,7 +65,6 @@ export default defineComponent({
       return `El${prop.data.type}`;
     });
     const config = reactive(prop.data.config);
-    debugger;
     const formData = prop.data.form ? reactive(prop.data.form) : {};
     // const stop = watch(dialogVisible, (val) => {
     const dialogVisible = ref(false);
@@ -103,7 +98,6 @@ export default defineComponent({
       nextTick(() => {
         for (const key in data) {
           if (Object.prototype.hasOwnProperty.call(formData, key)) {
-            debugger;
             formData[key] = data[key];
           }
         }
