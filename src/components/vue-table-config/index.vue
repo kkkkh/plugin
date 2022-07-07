@@ -95,7 +95,7 @@ import {
 import { defaultTable, defaultPagination, tableHandle } from "./hooks/index";
 import { TableType, PaginationType } from "./ts/index";
 export default defineComponent({
-  name: "VueTableConfig",
+  name: "vue-table-config",
   components: {
     ElTableColumn,
     // ElButton,

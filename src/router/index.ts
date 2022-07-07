@@ -61,6 +61,14 @@ const routes: Array<RouteConfig> = [
             /* webpackChunkName: "vueTableConfig" */ "../views/vue-table-config/index.vue"
           ),
       },
+      {
+        path: "vueDialogDrawer",
+        name: "vueDialogDrawer",
+        component: () =>
+          import(
+            /* webpackChunkName: "vueDialogDrawer" */ "../views/vue-dialog-drawer/index.vue"
+          ),
+      },
     ],
   },
 ];
