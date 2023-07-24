@@ -6,7 +6,8 @@ import {
   MapPageDataValueType,
   RightCountType,
 } from "@/types/page";
-class PageBase<T> {
+
+abstract class PageBase<T> {
   state = reactive({
     size: 10,
     total: 0,
@@ -22,11 +23,7 @@ class PageBase<T> {
   constructor(config: { name: string }) {
     this.name = config.name;
   }
-
-  setPageViewData() {
-    console.log("setPageViewData");
-  }
-
+  abstract setPageViewData(): void;
   handleSizeChange(size: number) {
     this.state.size = size;
     this.setPageViewData();

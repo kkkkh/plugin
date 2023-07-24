@@ -9,7 +9,7 @@
         <span slot="title">{{ item.name }}</span>
       </el-menu-item>
     </el-menu>
-    <router-view></router-view>
+    <router-view style="width: 1000px"></router-view>
   </div>
 </template>
 <script lang="ts">
