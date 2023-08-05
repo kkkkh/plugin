@@ -1,4 +1,4 @@
-import { installCon } from "./utitls/install";
+import { installCon } from "./utils/install";
 
 import VueTransferPagination from "@/components/vue-transfer-pagination";
 // import VueFormConfig from "@/components/vue-form-config";

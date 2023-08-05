@@ -22,14 +22,6 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "plugins" */ "../views/plugins/index.vue"),
     children: [
       {
-        path: "vueTransferPagination",
-        name: "vueTransferPagination",
-        component: () =>
-          import(
-            /* webpackChunkName: "vueTransferPagination" */ "../views/vue-transfer-pagination/index.vue"
-          ),
-      },
-      {
         path: "vueFormConfig",
         name: "vueFormConfig",
         component: () =>
@@ -46,11 +38,19 @@ const routes: Array<RouteConfig> = [
           ),
       },
       {
-        path: "statusOper",
-        name: "statusOper",
+        path: "vueScroll",
+        name: "vueScroll",
         component: () =>
           import(
-            /* webpackChunkName: "statusOper" */ "../views/status-oper/index.vue"
+            /* webpackChunkName: "vueScroll" */ "../views/vue-scroll/index.vue"
+          ),
+      },
+      {
+        path: "d3ForceSimulation",
+        name: "d3ForceSimulation",
+        component: () =>
+          import(
+            /* webpackChunkName: "d3ForceSimulation" */ "../views/d3-force-simulation/index.vue"
           ),
       },
       {
@@ -70,11 +70,19 @@ const routes: Array<RouteConfig> = [
           ),
       },
       {
-        path: "vueSelectTree",
-        name: "vueSelectTree",
+        path: "vueTransferPagination",
+        name: "vueTransferPagination",
         component: () =>
           import(
-            /* webpackChunkName: "vueSelectTree" */ "../views/vue-select-tree/index.vue"
+            /* webpackChunkName: "vueTransferPagination" */ "../views/vue-transfer-pagination/index.vue"
+          ),
+      },
+      {
+        path: "statusOper",
+        name: "statusOper",
+        component: () =>
+          import(
+            /* webpackChunkName: "statusOper" */ "../views/status-oper/index.vue"
           ),
       },
     ],

@@ -137,7 +137,7 @@ export default defineComponent({
 .vue-dialog-drawer {
   .el-drawer__body {
     position: relative;
-    .drawer-footer{
+    .drawer-footer {
       position: absolute;
       bottom: 0;
       right: 0;

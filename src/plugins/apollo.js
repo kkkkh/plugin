@@ -1,2 +1,2 @@
-import initApolloClient from "../utitls/apollo/init";
+import initApolloClient from "../utils/apollo/init";
 initApolloClient();

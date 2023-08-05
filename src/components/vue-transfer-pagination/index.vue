@@ -129,7 +129,7 @@ export default defineComponent({
       },
     },
   },
-  setup(prop: { data: TransferData[],val:[] }, ctx: SetupContext) {
+  setup(prop: { data: TransferData[]; val: [] }, ctx: SetupContext) {
     const originPage = new OriginPageState<TransferData>({
       key: "key",
       name: "origin",
@@ -175,11 +175,11 @@ export default defineComponent({
         immediate: true,
       }
     );
-    const init = (data:[])=>{
+    const init = (data: []) => {
       originPage.setToRight(data);
       mapPage.setToRight(data);
       ctx.emit("input", mapPage.allData.value);
-    }
+    };
     return {
       tables,
       tableChange,
