@@ -38,6 +38,14 @@ const routes: Array<RouteConfig> = [
           ),
       },
       {
+        path: "validateCode",
+        name: "validateCode",
+        component: () =>
+          import(
+            /* webpackChunkName: "validateCode" */ "../views/validate-code/index.vue"
+          ),
+      },
+      {
         path: "vueScroll",
         name: "vueScroll",
         component: () =>
